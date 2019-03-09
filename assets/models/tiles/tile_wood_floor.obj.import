@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/tile_wood_floor.obj-6cc975c67500ebbe49623e06a15d8b6a.mesh"
+
+[deps]
+
+files=[ "res://.import/tile_wood_floor.obj-6cc975c67500ebbe49623e06a15d8b6a.mesh" ]
+
+source_file="res://assets/models/tiles/tile_wood_floor.obj"
+dest_files=[ "res://.import/tile_wood_floor.obj-6cc975c67500ebbe49623e06a15d8b6a.mesh", "res://.import/tile_wood_floor.obj-6cc975c67500ebbe49623e06a15d8b6a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
