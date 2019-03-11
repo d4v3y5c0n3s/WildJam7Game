@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/new_environment.tres" type="Environment" id=1]
 
-[node name="Node2D" type="Spatial" index="0"]
+[node name="Node2D" type="Spatial"]
 
 [node name="Camera" type="Camera" parent="." index="0"]
 
