@@ -48,7 +48,7 @@ var positive_adj = ["great", "super", "fun", "entertaining", "easy"]
 var negative_adj = ["boring", "difficult", "ugly", "bad"]
 
 func start_transitions(txt):
-	splitted_txt = txt.split(null, 1)
+	var splitted_txt = txt.split(null, 1)
 	var word
 	if splitted_txt.size() > 1:
 		word = splitted_txt.front()
@@ -63,8 +63,7 @@ func start_transitions(txt):
 		newState = "error_state"
 	return [newState, txt]
 func gd_state_transitions(txt):
-	splitted_txt = txt.split(null, 1)
-	splitted_txt = txt.split(null, 1)
+	var splitted_txt = txt.split(null, 1)
 	var word
 	if splitted_txt.size() > 1:
 		word = splitted_txt.front()
@@ -79,8 +78,7 @@ func gd_state_transitions(txt):
 		newState = "error_state"
 	return [newState, txt]
 func is_state_transitions(txt):
-	splitted_txt = txt.split(null, 1)
-	splitted_txt = txt.split(null, 1)
+	var splitted_txt = txt.split(null, 1)
 	var word
 	if splitted_txt.size() > 1:
 		word = splitted_txt.front()
@@ -91,16 +89,15 @@ func is_state_transitions(txt):
 	var newState
 	if word == "not":
 		newState = "not_state"
-	elif word in positive_adjectives:
+	elif word in positive_adj:
 		newState = "pos_state"
-	elif word in negative_adjectives:
+	elif word in negative_adj:
 		newState = "neg_state"
 	else:
 		newState = "error_state"
 	return [newState, txt]
 func not_state_transitions(txt):
-	splitted_txt = txt.split(null, 1)
-	splitted_txt = txt.split(null, 1)
+	var splitted_txt = txt.split(null, 1)
 	var word
 	if splitted_txt.size() > 1:
 		word = splitted_txt.front()
@@ -109,9 +106,9 @@ func not_state_transitions(txt):
 		word = txt
 		txt = ""
 	var newState
-	if word in positive_adjectives:
+	if word in positive_adj:
 		newState = "neg_state"
-	elif word in negative_adjectives:
+	elif word in negative_adj:
 		newState = "pos_state"
 	else:
 		newState = "error_state"
@@ -123,11 +120,11 @@ func neg_state(txt):
 ###
 
 func _ready():
-	var m = StateMachine()
-	m.add_state("Start", start_transitions())
-	m.add_state("Python_state", python_state_transitions())
-	m.add_state("is_state", is_state_transitions())
-	m.add_state("not_state", not_state_transitions())
+	var m = StateMachine
+	m.add_state("Start", start_transitions(""))
+	m.add_state("Python_state", python_state_transitions(""))
+	m.add_state("is_state", is_state_transitions(""))
+	m.add_state("not_state", not_state_transitions(""))
 	m.add_state("neg_state", null, 1)
 	m.add_state("pos_state", null, 1)
 	m.add_state("error_state", null, 1)
