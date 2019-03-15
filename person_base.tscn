@@ -2,7 +2,7 @@
 
 [ext_resource path="res://person_base.gd" type="Script" id=1]
 
-[node name="person" type="Position3D" index="0"]
+[node name="person" type="Position3D"]
 
 script = ExtResource( 1 )
 
@@ -19,5 +19,46 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = null
 skeleton = NodePath("..")
+
+[node name="encounter" type="Area" parent="." index="1"]
+
+input_ray_pickable = false
+input_capture_on_drag = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision_layer = 1
+collision_mask = 1
+audio_bus_override = false
+audio_bus_name = "Master"
+reverb_bus_enable = false
+reverb_bus_name = "Master"
+reverb_bus_amount = 0.0
+reverb_bus_uniformity = 0.0
+
+[node name="go_pos_z" type="Position3D" parent="." index="2"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="go_neg_z" type="Position3D" parent="." index="3"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5 )
+
+[node name="go_neg_x" type="Position3D" parent="." index="4"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="go_pos_x" type="Position3D" parent="." index="5"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0 )
 
 
