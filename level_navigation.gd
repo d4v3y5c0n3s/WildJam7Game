@@ -16,8 +16,6 @@ var draw_path = true
 
 func _process(delta):
 
-	print("began using _process()")
-
 	if (path.size() > 1):
 		var to_walk = delta * SPEED
 		var to_watch = Vector3(0, 1, 0)

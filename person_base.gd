@@ -1,16 +1,27 @@
 extends Position3D
 
-#  implement a fsm for character behviour
-
 var state = 0
+var speed = 4.0
 
 ###
 
 func _process(delta):
 	
+	var current_action = 0
+	var completed_action = true
+	
 	match state:
 		0:#  wander state
-			pass
+			if completed_action:#  if there is no current action, randomly choose one
+				current_action = randi() % 3 + 1#  chooses a random action
+			else:
+				match current_action:
+					1:
+						pass
+					2:
+						pass
+					3:
+						pass
 		1:#  jealous state
 			pass
 		2:#  angered state
