@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/person_state_fearful.obj-904c4a95ca810e7ff0022bdd016f2eb2.mesh"
+
+[deps]
+
+files=[ "res://.import/person_state_fearful.obj-904c4a95ca810e7ff0022bdd016f2eb2.mesh" ]
+
+source_file="res://assets/person_state_fearful.obj"
+dest_files=[ "res://.import/person_state_fearful.obj-904c4a95ca810e7ff0022bdd016f2eb2.mesh", "res://.import/person_state_fearful.obj-904c4a95ca810e7ff0022bdd016f2eb2.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

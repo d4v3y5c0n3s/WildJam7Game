@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/person_state_thrilled.obj-64f5547b39138b09aa58bb0be00030b0.mesh"
+
+[deps]
+
+files=[ "res://.import/person_state_thrilled.obj-64f5547b39138b09aa58bb0be00030b0.mesh" ]
+
+source_file="res://assets/person_state_thrilled.obj"
+dest_files=[ "res://.import/person_state_thrilled.obj-64f5547b39138b09aa58bb0be00030b0.mesh", "res://.import/person_state_thrilled.obj-64f5547b39138b09aa58bb0be00030b0.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

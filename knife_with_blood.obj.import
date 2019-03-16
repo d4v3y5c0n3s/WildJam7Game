@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/knife_with_blood.obj-00cc7b482241472f3d45d5c2c6aa97ef.mesh"
+
+[deps]
+
+files=[ "res://.import/knife_with_blood.obj-00cc7b482241472f3d45d5c2c6aa97ef.mesh" ]
+
+source_file="res://assets/knife_with_blood.obj"
+dest_files=[ "res://.import/knife_with_blood.obj-00cc7b482241472f3d45d5c2c6aa97ef.mesh", "res://.import/knife_with_blood.obj-00cc7b482241472f3d45d5c2c6aa97ef.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
