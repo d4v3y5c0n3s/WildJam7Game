@@ -6,44 +6,54 @@ onready var navNodeRef = get_parent().get_parent()#  gets the navigation node
 
 var state = 0
 var speed = 6.0
+var health = 20
 
 var begin = Vector3()
 var end = Vector3()
 var path = Array()
 
-#deals with states
+#  deals with states
 var current_action = 0
 var completed_action = true
 
-var b = true#  a helper for calling go_here() only once
+var b = true#  a general helper for the different states
+var w = false#  another helper
+
+var pick_up#  the item which is being picked up
+var holding#  the item which is currently being held
+var start_holding = false
+
+#  deals with who is in the room
+var visible_people = []
+var visible_items = []
 
 func go_here(pos):#  called to set up a path to follow
 	# clears previous values
 	begin = Vector3()
 	end = Vector3()
 	path = Array()
-	
+
 	begin = navNodeRef.getBegin(self)#  sets up begin
 	end = navNodeRef.pointGetEnd(pos)#  sets up end
 	path = navNodeRef.updatePath(begin, end)#  updates the path
-	
+
 	#  at this point, the path has been set up.
 	#  now, call go_step to move the character
 	#  by a step
 
-func go_step(processDelta): 
+func go_step(processDelta):
 	#  actually moves the character by a step
-	
+
 	if path.size() > 1:
 		var toWalk = processDelta * speed
 		var toWatch = Vector3(0, 1, 0)
-		
+
 		while toWalk > 0 and path.size() >= 2:
 			var pFrom = path[path.size() - 1]
 			var pTo = path[path.size() - 2]
-			
+
 			toWatch = (pTo - pFrom).normalized()
-			
+
 			var d = pFrom.distance_to(pTo)
 			if d <= toWalk:
 				path.remove(path.size() - 1)
@@ -51,27 +61,27 @@ func go_step(processDelta):
 			else:
 				path[path.size() - 1] = pFrom.linear_interpolate(pTo, toWalk/d)
 				toWalk = 0
-		
+
 		var atPos = path[path.size() - 1]
 		var atDir = toWatch
 		atDir.y = 0
-		
+
 		var t = Transform()
-		
+
 		t.origin = atPos
 		t = t.looking_at(atPos + atDir, Vector3(0, 1, 0))#  this makes the character face where they are going
 		set_transform(t)
-		
+
 		if path.size() < 2:
 			path = []
 			#  if this point is reached, our destination has been arrived at
-		
+
 		return false
 	else:
 		#  this means we are already at our destination
 		return true
 
-#  the following calls the above, but uses the Position3Ds 
+#  the following calls the above, but uses the Position3Ds
 #  go_pos_z, go_neg_z, go_neg_x, go_pos_x to just move in
 #  a direction;  could also be used for player control
 func go_up(processDelta):
@@ -82,7 +92,7 @@ func go_up(processDelta):
 	print(begin)
 	print(end)
 	print(path)
-	
+
 	go_step(processDelta)
 
 func go_down(processDelta):
@@ -93,7 +103,7 @@ func go_down(processDelta):
 	print(begin)
 	print(end)
 	print(path)
-	
+
 	go_step(processDelta)
 
 func go_left(processDelta):
@@ -104,7 +114,7 @@ func go_left(processDelta):
 	print(begin)
 	print(end)
 	print(path)
-	
+
 	go_step(processDelta)
 
 func go_right(processDelta):
@@ -115,11 +125,11 @@ func go_right(processDelta):
 	print(begin)
 	print(end)
 	print(path)
-	
+
 	go_step(processDelta)
 
 func _process(delta):
-	
+
 	#tests directional movement with player input
 	if Input.is_action_just_pressed("ui_up"):#  up
 		go_up(delta)
@@ -129,16 +139,46 @@ func _process(delta):
 		go_left(delta)
 	elif Input.is_action_just_pressed("ui_right"):#  right
 		go_right(delta)
-	
+
 	match state:
 		0:#  wander state
 			if completed_action:#  if there is no current action, randomly choose one
-				current_action = 2#randi() % 3 + 1#  chooses a random action
+				current_action = 1#randi() % 3 + 1#  chooses a random action
 				completed_action = false
 			else:
 				match current_action:
 					1:#  pick up an item
-						pass
+						print("chose to pick up item")
+						if not b:#  start picking up item
+							if not w:
+								go_here(pick_up.translation)
+								w = true
+							else:
+								if go_step(delta):
+									
+									#  here, we need to actually call the function to pick up the item
+									pick_up.pick_up()
+									grab(pick_up)
+									
+									#note, picking up items needs to be based on the
+									#'encounter' area, so that no bugs where multiple
+									#enemies hold the same item occurs
+									
+									w = false
+									pick_up = null
+						else:
+							print("no items in the room")
+							if visible_items.size() < 1:#  no items in the room
+								completed_action = true
+							else:
+								for i in visible_items:
+									if i.type != 0:#  checks if the item is not a weapon
+										if i.claimed:#  checks if item is claimed
+											b = false
+											i.claimed = true#  claims the item
+											pick_up = i#  sets the item reference as the item it will pick up
+								if b:
+									completed_action = true
 					2:#  go to a random room
 						if b:
 							go_here(go_to_random_room())
@@ -160,17 +200,21 @@ func _process(delta):
 			pass
 		6:#  dead state
 			pass
+	
+	#  hold on to any items the person has
+	if start_holding:
+		hold(holding)
 
 #  THESE FUNCTIONS CHANGE THE CHARACTER STATE
 func change_to_wander():
 	pass
-func change_to_jealous():
+func change_to_jealous(target):
 	pass
-func change_to_angered():
+func change_to_angered(target):
 	pass
 func change_to_fearful():
 	pass
-func change_to_hostile():
+func change_to_hostile(target):
 	pass
 func change_to_thrilled():
 	pass
@@ -199,12 +243,22 @@ func go_to_random_room():
 		8:
 			return Vector3(2.029072, 55, -3.927081)
 
-func _ready():
+#  functions related to holding items
+func grab(the_item):
+	the_item = holding
+	start_holding = true
+func hold(the_item):#  this is constantly called to keep hold of items
+	the_item.translation = begin
+func drop(the_item):
 	pass
 
 func _on_encounter_area_entered(area):
 	if area.IDENTITY == 0:#  a room
 		area.people.append(self)#  lets the room know that they have entered
+
+		#  asks room what is inside
+		visible_people = area.read_room()[0]
+		visible_items = area.read_room()[1]
 	elif area.IDENTITY == 1:#  a person
 		pass
 	elif area.IDENTITY == 2:#
@@ -215,9 +269,12 @@ func _on_encounter_area_entered(area):
 func _on_encounter_area_exited(area):
 	if area.IDENTITY == 0:#  a room
 		area.people.erase(self)#  lets the room know that they have left
+		#  clears visible items & people
+		visible_items = []
+		visible_people = []
 	elif area.IDENTITY == 1:#  a person
 		pass
-	elif area.IDENTITY == 2:#
+	elif area.IDENTITY == 2:# an item
 		pass
-	elif area.IDENTITY == 3:#
+	elif area.IDENTITY == 3:# a door
 		pass

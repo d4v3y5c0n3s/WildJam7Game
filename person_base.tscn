@@ -7,7 +7,7 @@
 
 extents = Vector3( 3.6, 4.3, 3.6 )
 
-[node name="person" type="Position3D" index="0"]
+[node name="person" type="Position3D"]
 
 script = ExtResource( 1 )
 
