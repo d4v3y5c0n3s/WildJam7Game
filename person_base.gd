@@ -225,15 +225,12 @@ func drop(the_item):
 func _on_encounter_area_entered(area):
 	if area.IDENTITY == 0:#  a room
 		area.people.append(self)#  lets the room know that they have entered
-
 		#  asks room what is inside
 		visible_people = area.read_room()[0]
 		visible_items = area.read_room()[1]
 	elif area.IDENTITY == 1:#  a person
 		pass
-	elif area.IDENTITY == 2:#
-		pass
-	elif area.IDENTITY == 3:#
+	elif area.IDENTITY == 2:#  the will
 		pass
 
 func _on_encounter_area_exited(area):
@@ -244,7 +241,10 @@ func _on_encounter_area_exited(area):
 		visible_people = []
 	elif area.IDENTITY == 1:#  a person
 		pass
-	elif area.IDENTITY == 2:# an item
-		pass
-	elif area.IDENTITY == 3:# a door
-		pass
+	elif area.IDENTITY == 2:# the will
+		if area.guy_who_gets_money == self:
+			change_to_thrilled()
+			print("change to thrilled")
+		else:
+			print("change to jealous")
+			change_to_jealous(area.guy_who_gets_money)
