@@ -2,16 +2,18 @@
 
 importer="wavefront_obj"
 type="Mesh"
-path="res://.import/blood_1.obj-e83fda44c227eeba71baca8c9ad0cccb.mesh"
+path="res://.import/blood_1.obj-262cda2cc589a888164fb0151412104b.mesh"
 
 [deps]
 
-files=[ "res://.import/blood_1.obj-e83fda44c227eeba71baca8c9ad0cccb.mesh" ]
+files=[ "res://.import/blood_1.obj-262cda2cc589a888164fb0151412104b.mesh" ]
 
-source_file="res://assets/blood_1.obj"
-dest_files=[ "res://.import/blood_1.obj-e83fda44c227eeba71baca8c9ad0cccb.mesh", "res://.import/blood_1.obj-e83fda44c227eeba71baca8c9ad0cccb.mesh" ]
+source_file="res://blood_1.obj"
+source_md5="c8de8c20662548fa6842d084451e856b"
+
+dest_files=[ "res://.import/blood_1.obj-262cda2cc589a888164fb0151412104b.mesh", "res://.import/blood_1.obj-262cda2cc589a888164fb0151412104b.mesh" ]
+dest_md5="bc70eb9407be45f923511ac1e4671e49"
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )

@@ -2,13 +2,16 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/potted_plant_no_leaves.png-f788428f43a7eb45169f1101ea1938c1.s3tc.stex"
-path.etc2="res://.import/potted_plant_no_leaves.png-f788428f43a7eb45169f1101ea1938c1.etc2.stex"
+path.s3tc="res://.import/potted_plant_no_leaves.png-8e23f2afd0eaf4e812b7542cf25f9df7.s3tc.stex"
+path.etc2="res://.import/potted_plant_no_leaves.png-8e23f2afd0eaf4e812b7542cf25f9df7.etc2.stex"
 
 [deps]
 
-source_file="res://assets/potted_plant_no_leaves.png"
-dest_files=[ "res://.import/potted_plant_no_leaves.png-f788428f43a7eb45169f1101ea1938c1.s3tc.stex", "res://.import/potted_plant_no_leaves.png-f788428f43a7eb45169f1101ea1938c1.etc2.stex" ]
+source_file="res://potted_plant_no_leaves.png"
+source_md5="04a893daa9ca42b541222106757e78a2"
+
+dest_files=[ "res://.import/potted_plant_no_leaves.png-8e23f2afd0eaf4e812b7542cf25f9df7.s3tc.stex", "res://.import/potted_plant_no_leaves.png-8e23f2afd0eaf4e812b7542cf25f9df7.etc2.stex" ]
+dest_md5="c83fc50068121077926ef410ef61fbf6"
 
 [params]
 

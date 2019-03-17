@@ -2,16 +2,18 @@
 
 importer="wavefront_obj"
 type="Mesh"
-path="res://.import/person_state_fearful.obj-904c4a95ca810e7ff0022bdd016f2eb2.mesh"
+path="res://.import/person_state_fearful.obj-4f1e9db9e1fa96246b9579de60690241.mesh"
 
 [deps]
 
-files=[ "res://.import/person_state_fearful.obj-904c4a95ca810e7ff0022bdd016f2eb2.mesh" ]
+files=[ "res://.import/person_state_fearful.obj-4f1e9db9e1fa96246b9579de60690241.mesh" ]
 
-source_file="res://assets/person_state_fearful.obj"
-dest_files=[ "res://.import/person_state_fearful.obj-904c4a95ca810e7ff0022bdd016f2eb2.mesh", "res://.import/person_state_fearful.obj-904c4a95ca810e7ff0022bdd016f2eb2.mesh" ]
+source_file="res://person_state_fearful.obj"
+source_md5="aa1a0adaf2fa47a0fd386aa81106cd5b"
+
+dest_files=[ "res://.import/person_state_fearful.obj-4f1e9db9e1fa96246b9579de60690241.mesh", "res://.import/person_state_fearful.obj-4f1e9db9e1fa96246b9579de60690241.mesh" ]
+dest_md5="c1eefd3b54984d8fc4bd954091aac7d9"
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )

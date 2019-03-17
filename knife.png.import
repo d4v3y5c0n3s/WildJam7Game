@@ -2,13 +2,16 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/knife.png-fe86871d33c75ce9d4eb4f1452dfa3c9.s3tc.stex"
-path.etc2="res://.import/knife.png-fe86871d33c75ce9d4eb4f1452dfa3c9.etc2.stex"
+path.s3tc="res://.import/knife.png-3a05c28fdac703eeae0d97922cbb4a37.s3tc.stex"
+path.etc2="res://.import/knife.png-3a05c28fdac703eeae0d97922cbb4a37.etc2.stex"
 
 [deps]
 
-source_file="res://assets/knife.png"
-dest_files=[ "res://.import/knife.png-fe86871d33c75ce9d4eb4f1452dfa3c9.s3tc.stex", "res://.import/knife.png-fe86871d33c75ce9d4eb4f1452dfa3c9.etc2.stex" ]
+source_file="res://knife.png"
+source_md5="04a893daa9ca42b541222106757e78a2"
+
+dest_files=[ "res://.import/knife.png-3a05c28fdac703eeae0d97922cbb4a37.s3tc.stex", "res://.import/knife.png-3a05c28fdac703eeae0d97922cbb4a37.etc2.stex" ]
+dest_md5="d0c1be1ebdbb711a54c4a54898b27f31"
 
 [params]
 

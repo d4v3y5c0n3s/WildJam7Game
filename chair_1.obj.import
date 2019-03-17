@@ -2,16 +2,18 @@
 
 importer="wavefront_obj"
 type="Mesh"
-path="res://.import/chair_1.obj-8ebde178c9ec13b36659b11e61d89068.mesh"
+path="res://.import/chair_1.obj-ac2627d90132e7bb0ee06d7f7b4b5db7.mesh"
 
 [deps]
 
-files=[ "res://.import/chair_1.obj-8ebde178c9ec13b36659b11e61d89068.mesh" ]
+files=[ "res://.import/chair_1.obj-ac2627d90132e7bb0ee06d7f7b4b5db7.mesh" ]
 
-source_file="res://assets/chair_1.obj"
-dest_files=[ "res://.import/chair_1.obj-8ebde178c9ec13b36659b11e61d89068.mesh", "res://.import/chair_1.obj-8ebde178c9ec13b36659b11e61d89068.mesh" ]
+source_file="res://chair_1.obj"
+source_md5="e4f16a316a052ce66e4812781e5c9a3c"
+
+dest_files=[ "res://.import/chair_1.obj-ac2627d90132e7bb0ee06d7f7b4b5db7.mesh", "res://.import/chair_1.obj-ac2627d90132e7bb0ee06d7f7b4b5db7.mesh" ]
+dest_md5="1133a301a1a6927603bd7f6e5028aedf"
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )

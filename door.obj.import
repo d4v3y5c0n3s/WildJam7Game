@@ -2,16 +2,18 @@
 
 importer="wavefront_obj"
 type="Mesh"
-path="res://.import/door.obj-0fb83b59bdc918880856774dece889b5.mesh"
+path="res://.import/door.obj-5bd0018d508475f99bc28b5a3b7a8d6e.mesh"
 
 [deps]
 
-files=[ "res://.import/door.obj-0fb83b59bdc918880856774dece889b5.mesh" ]
+files=[ "res://.import/door.obj-5bd0018d508475f99bc28b5a3b7a8d6e.mesh" ]
 
-source_file="res://assets/door.obj"
-dest_files=[ "res://.import/door.obj-0fb83b59bdc918880856774dece889b5.mesh", "res://.import/door.obj-0fb83b59bdc918880856774dece889b5.mesh" ]
+source_file="res://door.obj"
+source_md5="fa146fb944842654359b2f9c498eb1ae"
+
+dest_files=[ "res://.import/door.obj-5bd0018d508475f99bc28b5a3b7a8d6e.mesh", "res://.import/door.obj-5bd0018d508475f99bc28b5a3b7a8d6e.mesh" ]
+dest_md5="6b19ad7fe4291689f6a779e95cf3afa5"
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )

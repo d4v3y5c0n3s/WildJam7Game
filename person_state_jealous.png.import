@@ -2,13 +2,16 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/person_state_jealous.png-3aaa86c3619116aea2077af0ae3bbb0c.s3tc.stex"
-path.etc2="res://.import/person_state_jealous.png-3aaa86c3619116aea2077af0ae3bbb0c.etc2.stex"
+path.s3tc="res://.import/person_state_jealous.png-a23741b2e79f729baca98cacc197daa7.s3tc.stex"
+path.etc2="res://.import/person_state_jealous.png-a23741b2e79f729baca98cacc197daa7.etc2.stex"
 
 [deps]
 
-source_file="res://assets/person_state_jealous.png"
-dest_files=[ "res://.import/person_state_jealous.png-3aaa86c3619116aea2077af0ae3bbb0c.s3tc.stex", "res://.import/person_state_jealous.png-3aaa86c3619116aea2077af0ae3bbb0c.etc2.stex" ]
+source_file="res://person_state_jealous.png"
+source_md5="04a893daa9ca42b541222106757e78a2"
+
+dest_files=[ "res://.import/person_state_jealous.png-a23741b2e79f729baca98cacc197daa7.s3tc.stex", "res://.import/person_state_jealous.png-a23741b2e79f729baca98cacc197daa7.etc2.stex" ]
+dest_md5="0c5dfdf06a4f69c3a162510f2146223e"
 
 [params]
 

@@ -2,13 +2,16 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/person_state_fearful.png-8e72596ea295ce0a6471ed12eb4d3316.s3tc.stex"
-path.etc2="res://.import/person_state_fearful.png-8e72596ea295ce0a6471ed12eb4d3316.etc2.stex"
+path.s3tc="res://.import/person_state_fearful.png-3df03b67242ab1f0bfc2afe76b4c7b7b.s3tc.stex"
+path.etc2="res://.import/person_state_fearful.png-3df03b67242ab1f0bfc2afe76b4c7b7b.etc2.stex"
 
 [deps]
 
-source_file="res://assets/person_state_fearful.png"
-dest_files=[ "res://.import/person_state_fearful.png-8e72596ea295ce0a6471ed12eb4d3316.s3tc.stex", "res://.import/person_state_fearful.png-8e72596ea295ce0a6471ed12eb4d3316.etc2.stex" ]
+source_file="res://person_state_fearful.png"
+source_md5="04a893daa9ca42b541222106757e78a2"
+
+dest_files=[ "res://.import/person_state_fearful.png-3df03b67242ab1f0bfc2afe76b4c7b7b.s3tc.stex", "res://.import/person_state_fearful.png-3df03b67242ab1f0bfc2afe76b4c7b7b.etc2.stex" ]
+dest_md5="46f4c6e042361acb9721c9d53199c76b"
 
 [params]
 

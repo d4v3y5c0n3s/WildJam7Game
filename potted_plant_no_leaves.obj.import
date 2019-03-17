@@ -2,16 +2,18 @@
 
 importer="wavefront_obj"
 type="Mesh"
-path="res://.import/potted_plant_no_leaves.obj-ba95c651b4339aded51862d26423c3c7.mesh"
+path="res://.import/potted_plant_no_leaves.obj-bb5914a770897fb055083a4eff82b39d.mesh"
 
 [deps]
 
-files=[ "res://.import/potted_plant_no_leaves.obj-ba95c651b4339aded51862d26423c3c7.mesh" ]
+files=[ "res://.import/potted_plant_no_leaves.obj-bb5914a770897fb055083a4eff82b39d.mesh" ]
 
-source_file="res://assets/potted_plant_no_leaves.obj"
-dest_files=[ "res://.import/potted_plant_no_leaves.obj-ba95c651b4339aded51862d26423c3c7.mesh", "res://.import/potted_plant_no_leaves.obj-ba95c651b4339aded51862d26423c3c7.mesh" ]
+source_file="res://potted_plant_no_leaves.obj"
+source_md5="28da67b23ccaf6220a7c88fb375c85e8"
+
+dest_files=[ "res://.import/potted_plant_no_leaves.obj-bb5914a770897fb055083a4eff82b39d.mesh", "res://.import/potted_plant_no_leaves.obj-bb5914a770897fb055083a4eff82b39d.mesh" ]
+dest_md5="51de2b9c133ffce7e10f7dd41b693f3d"
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
