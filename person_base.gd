@@ -5,6 +5,17 @@ const IDENTITY = 1#  1 is the identity of people
 onready var navNodeRef = get_parent().get_parent()#  gets the navigation node
 
 var state = 0
+var perpetrator # helper variable for states which have perpetrators
+
+# == STATE INDEX ==
+#	0	|	Wander
+#	1	|	Jealous
+#	2	|	Angry
+#	3	|	Fearful
+#	4	|	Hostile
+#	5	|	Thrilled
+#	6	|	Dead
+
 var speed = 6.0
 var health = 20
 var attack = 5
@@ -152,7 +163,22 @@ func _process(delta):
 			1:#  jealous state
 				pass
 			2:#  angered state
-				pass
+				if completed_action:
+					current_action = 0
+					completed_action = false
+				else:
+					if b and !perpetrator.state == 6:
+						print("going to"+str(perpetrator.translation))
+						go_here(perpetrator.translation)
+						b = false
+					else:
+						if perpetrator.state == 6:
+							change_to_wander()
+							completed_action = true
+							b = true
+					if go_step(delta):
+						completed_action = true
+						b = true
 			3:#  fearful state
 				pass
 			4:#  hostile state
@@ -162,14 +188,16 @@ func _process(delta):
 			6:#  dead state
 				pass
 	else:
-		if Input.is_action_just_pressed("ui_up"):#  up
+		if Input.is_action_pressed("ui_up"):#  up
 			go_up(delta)
-		elif Input.is_action_just_pressed("ui_down"):#  down
+		elif Input.is_action_pressed("ui_down"):#  down
 			go_down(delta)
-		elif Input.is_action_just_pressed("ui_left"):#  left
+		elif Input.is_action_pressed("ui_left"):#  left
 			go_left(delta)
-		elif Input.is_action_just_pressed("ui_right"):#  right
+		elif Input.is_action_pressed("ui_right"):#  right
 			go_right(delta)
+			
+		go_step(delta)
 
 	#  hold on to any items the person has
 	if start_holding:
@@ -177,19 +205,23 @@ func _process(delta):
 
 #  THESE FUNCTIONS CHANGE THE CHARACTER STATE
 func change_to_wander():
-	pass
+	state = 0
 func change_to_jealous(target):
-	pass
+	perpetrator = target
+	state = 1
 func change_to_angered(target):
-	pass
+	perpetrator = target
+	state = 2
 func change_to_fearful():
-	pass
+	state = 3
 func change_to_hostile(target):
-	pass
+	perpetrator = target
+	state = 4
 func change_to_thrilled():
-	pass
+	state = 5
 func change_to_dead():
-	pass
+	state = 6
+	hide()
 
 func go_to_random_room():
 	var room_id = randi() % 8 + 1
@@ -221,16 +253,35 @@ func hold(the_item):#  this is constantly called to keep hold of items
 	the_item.translation = begin
 func drop(the_item):
 	pass
+	
+# functions related to interactions with things
+func hit(damage):
+	health -= damage
+	print(health)
+	if health <= 0:
+		health = 0
+		
+		change_to_dead()
 
 func _on_encounter_area_entered(area):
 	if area.IDENTITY == 0:#  a room
 		area.people.append(self)#  lets the room know that they have entered
+
 		#  asks room what is inside
 		visible_people = area.read_room()[0]
 		visible_items = area.read_room()[1]
 	elif area.IDENTITY == 1:#  a person
+		var target = area.get_parent()
+		match state:
+			0:
+				pass
+				#target.call("change_to_angered")
+			2:
+				target.call("hit", self.attack)
+			
+	elif area.IDENTITY == 2:#
 		pass
-	elif area.IDENTITY == 2:#  the will
+	elif area.IDENTITY == 3:#
 		pass
 
 func _on_encounter_area_exited(area):
@@ -241,10 +292,7 @@ func _on_encounter_area_exited(area):
 		visible_people = []
 	elif area.IDENTITY == 1:#  a person
 		pass
-	elif area.IDENTITY == 2:# the will
-		if area.guy_who_gets_money == self:
-			change_to_thrilled()
-			print("change to thrilled")
-		else:
-			print("change to jealous")
-			change_to_jealous(area.guy_who_gets_money)
+	elif area.IDENTITY == 2:# an item
+		pass
+	elif area.IDENTITY == 3:# a door
+		pass

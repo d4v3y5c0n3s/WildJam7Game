@@ -43,6 +43,7 @@ func possess(): #Possess
 		currentchar = $people.get_child(pIndex-1) # set the current character
 		currentchar.possessed = true # possess him/her
 		currentchar.go_here(currentchar.translation) # stop him/her in their tracks
+		currentchar.completed_action = true
 		hasCamera = true # update the camera every frame
 	
 
@@ -53,9 +54,14 @@ func _ready():
 
 func _process(delta):
 	if hasCamera: 
-		camera.translation = Vector3(currentchar.translation.x, currentchar.translation.y + 5, 50)
+		camera.translation = Vector3(currentchar.translation.x, currentchar.translation.y + 5, currentchar.translation.z * 0.5 + 20)
 		#print(camera.translation)
 		
 	if Input.is_action_just_pressed("ui_accept"): #possess with button
 		possess()
+		
+	#Debug
+	if Input.is_action_just_pressed("ui_cancel"):
+		$people/person2.change_to_angered($people/person1)
+		print("Angery")
 		
