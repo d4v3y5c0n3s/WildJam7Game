@@ -9,9 +9,11 @@ path="res://.import/tile_grass.obj-9ecbd6e47f506f185b5a4f38f7d4f01a.mesh"
 files=[ "res://.import/tile_grass.obj-9ecbd6e47f506f185b5a4f38f7d4f01a.mesh" ]
 
 source_file="res://assets/models/tiles/tile_grass.obj"
+source_md5="6a32791b219241f40091457a114f3ecc"
+
 dest_files=[ "res://.import/tile_grass.obj-9ecbd6e47f506f185b5a4f38f7d4f01a.mesh", "res://.import/tile_grass.obj-9ecbd6e47f506f185b5a4f38f7d4f01a.mesh" ]
+dest_md5="8a6e0b1375e9e50033dd1567de161acb"
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )

@@ -9,9 +9,11 @@ path="res://.import/tile_wood_wall_corner.obj-d2f1f090f572f2efe032930de4bff191.m
 files=[ "res://.import/tile_wood_wall_corner.obj-d2f1f090f572f2efe032930de4bff191.mesh" ]
 
 source_file="res://assets/models/tiles/tile_wood_wall_corner.obj"
+source_md5="1011eedd7119356f4a9be63f8f659a5b"
+
 dest_files=[ "res://.import/tile_wood_wall_corner.obj-d2f1f090f572f2efe032930de4bff191.mesh", "res://.import/tile_wood_wall_corner.obj-d2f1f090f572f2efe032930de4bff191.mesh" ]
+dest_md5="f08313f923641d22d9ee877edab84e17"
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )

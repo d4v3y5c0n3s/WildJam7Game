@@ -8,7 +8,10 @@ path.etc2="res://.import/tile_wood_floor.png-d5ff9e9165ab4272e929110c7872dc64.et
 [deps]
 
 source_file="res://assets/models/tiles/tile_wood_floor.png"
+source_md5="04a893daa9ca42b541222106757e78a2"
+
 dest_files=[ "res://.import/tile_wood_floor.png-d5ff9e9165ab4272e929110c7872dc64.s3tc.stex", "res://.import/tile_wood_floor.png-d5ff9e9165ab4272e929110c7872dc64.etc2.stex" ]
+dest_md5="a2b5dd1aa849aa54b2af540191a53bc7"
 
 [params]
 

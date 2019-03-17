@@ -8,7 +8,10 @@ path.etc2="res://.import/tile_grass.png-8deca2a1bfb9d849c6bdfafec337ddde.etc2.st
 [deps]
 
 source_file="res://assets/models/tiles/tile_grass.png"
+source_md5="04a893daa9ca42b541222106757e78a2"
+
 dest_files=[ "res://.import/tile_grass.png-8deca2a1bfb9d849c6bdfafec337ddde.s3tc.stex", "res://.import/tile_grass.png-8deca2a1bfb9d849c6bdfafec337ddde.etc2.stex" ]
+dest_md5="29a4b9078f63aca9ac42ee3ba130e480"
 
 [params]
 
