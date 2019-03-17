@@ -7,6 +7,8 @@ onready var navNodeRef = get_parent().get_parent()#  gets the navigation node
 var state = 0
 var speed = 6.0
 var health = 20
+var attack = 5
+var possessed = false
 
 var begin = Vector3()
 var end = Vector3()
@@ -129,78 +131,46 @@ func go_right(processDelta):
 	go_step(processDelta)
 
 func _process(delta):
-
-	#tests directional movement with player input
-	if Input.is_action_just_pressed("ui_up"):#  up
-		go_up(delta)
-	elif Input.is_action_just_pressed("ui_down"):#  down
-		go_down(delta)
-	elif Input.is_action_just_pressed("ui_left"):#  left
-		go_left(delta)
-	elif Input.is_action_just_pressed("ui_right"):#  right
-		go_right(delta)
-
-	match state:
-		0:#  wander state
-			if completed_action:#  if there is no current action, randomly choose one
-				current_action = 1#randi() % 3 + 1#  chooses a random action
-				completed_action = false
-			else:
-				match current_action:
-					1:#  pick up an item
-						print("chose to pick up item")
-						if not b:#  start picking up item
-							if not w:
-								go_here(pick_up.translation)
-								w = true
-							else:
-								if go_step(delta):
-									
-									#  here, we need to actually call the function to pick up the item
-									pick_up.pick_up()
-									grab(pick_up)
-									
-									#note, picking up items needs to be based on the
-									#'encounter' area, so that no bugs where multiple
-									#enemies hold the same item occurs
-									
-									w = false
-									pick_up = null
-						else:
-							print("no items in the room")
-							if visible_items.size() < 1:#  no items in the room
-								completed_action = true
-							else:
-								for i in visible_items:
-									if i.type != 0:#  checks if the item is not a weapon
-										if i.claimed:#  checks if item is claimed
-											b = false
-											i.claimed = true#  claims the item
-											pick_up = i#  sets the item reference as the item it will pick up
-								if b:
-									completed_action = true
-					2:#  go to a random room
-						if b:
-							go_here(go_to_random_room())
-							b = false
-						if go_step(delta):
-							completed_action = true
-							b = true
-					3:#  check the will
-						pass
-		1:#  jealous state
-			pass
-		2:#  angered state
-			pass
-		3:#  fearful state
-			pass
-		4:#  hostile state
-			pass
-		5:#  thrilled state
-			pass
-		6:#  dead state
-			pass
 	
+	if not possessed:
+		match state:
+			0:#  wander state
+				if completed_action:#  if there is no current action, randomly choose one
+					current_action = randi() % 3 + 2#  chooses a random action
+					completed_action = false
+				else:
+					match current_action:
+						2:#  go to a random room
+							if b:
+								go_here(go_to_random_room())
+								b = false
+							if go_step(delta):
+								completed_action = true
+								b = true
+						3:#  check the will
+							pass
+			1:#  jealous state
+				pass
+			2:#  angered state
+				pass
+			3:#  fearful state
+				pass
+			4:#  hostile state
+				pass
+			5:#  thrilled state
+				pass
+			6:#  dead state
+				pass
+	else:
+		if Input.is_action_just_pressed("ui_up"):#  up
+			go_up(delta)
+		elif Input.is_action_just_pressed("ui_down"):#  down
+			go_down(delta)
+		elif Input.is_action_just_pressed("ui_left"):#  left
+			go_left(delta)
+		elif Input.is_action_just_pressed("ui_right"):#  right
+			go_right(delta)
+
 	#  hold on to any items the person has
 	if start_holding:
 		hold(holding)
