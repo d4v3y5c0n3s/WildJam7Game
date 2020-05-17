@@ -2,16 +2,18 @@
 
 importer="wavefront_obj"
 type="Mesh"
-path="res://.import/person_state_thrilled.obj-64f5547b39138b09aa58bb0be00030b0.mesh"
+path="res://.import/person_state_thrilled.obj-4f91228be8624f9a04e82f9f09e0849c.mesh"
 
 [deps]
 
-files=[ "res://.import/person_state_thrilled.obj-64f5547b39138b09aa58bb0be00030b0.mesh" ]
+files=[ "res://.import/person_state_thrilled.obj-4f91228be8624f9a04e82f9f09e0849c.mesh" ]
 
-source_file="res://assets/person_state_thrilled.obj"
-dest_files=[ "res://.import/person_state_thrilled.obj-64f5547b39138b09aa58bb0be00030b0.mesh", "res://.import/person_state_thrilled.obj-64f5547b39138b09aa58bb0be00030b0.mesh" ]
+source_file="res://person_state_thrilled.obj"
+source_md5="d09d0e9dc133afd55412eb1109cece7d"
+
+dest_files=[ "res://.import/person_state_thrilled.obj-4f91228be8624f9a04e82f9f09e0849c.mesh", "res://.import/person_state_thrilled.obj-4f91228be8624f9a04e82f9f09e0849c.mesh" ]
+dest_md5="36345168890c7977838ab36432f21337"
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )

@@ -2,13 +2,16 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/door.png-b71998044d513d047c9b0091ee4a07ff.s3tc.stex"
-path.etc2="res://.import/door.png-b71998044d513d047c9b0091ee4a07ff.etc2.stex"
+path.s3tc="res://.import/door.png-4ad4ab0c545155655bbef277d86eb152.s3tc.stex"
+path.etc2="res://.import/door.png-4ad4ab0c545155655bbef277d86eb152.etc2.stex"
 
 [deps]
 
-source_file="res://assets/door.png"
-dest_files=[ "res://.import/door.png-b71998044d513d047c9b0091ee4a07ff.s3tc.stex", "res://.import/door.png-b71998044d513d047c9b0091ee4a07ff.etc2.stex" ]
+source_file="res://door.png"
+source_md5="04a893daa9ca42b541222106757e78a2"
+
+dest_files=[ "res://.import/door.png-4ad4ab0c545155655bbef277d86eb152.s3tc.stex", "res://.import/door.png-4ad4ab0c545155655bbef277d86eb152.etc2.stex" ]
+dest_md5="eb6ca11bd3b7f7100168fc4471f26a3a"
 
 [params]
 

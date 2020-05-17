@@ -9,9 +9,11 @@ path="res://.import/tile_wood_floor.obj-6cc975c67500ebbe49623e06a15d8b6a.mesh"
 files=[ "res://.import/tile_wood_floor.obj-6cc975c67500ebbe49623e06a15d8b6a.mesh" ]
 
 source_file="res://assets/models/tiles/tile_wood_floor.obj"
+source_md5="6c6155d550c44caa32b8892d2611cbbb"
+
 dest_files=[ "res://.import/tile_wood_floor.obj-6cc975c67500ebbe49623e06a15d8b6a.mesh", "res://.import/tile_wood_floor.obj-6cc975c67500ebbe49623e06a15d8b6a.mesh" ]
+dest_md5="3551f42558fda5ab033266a29a36edca"
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )

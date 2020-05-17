@@ -2,13 +2,16 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/chair_1.png-c291b22cfbd0c9d0f5958c6822c41a3c.s3tc.stex"
-path.etc2="res://.import/chair_1.png-c291b22cfbd0c9d0f5958c6822c41a3c.etc2.stex"
+path.s3tc="res://.import/chair_1.png-a536f56f91c6874476381b94f1132ae0.s3tc.stex"
+path.etc2="res://.import/chair_1.png-a536f56f91c6874476381b94f1132ae0.etc2.stex"
 
 [deps]
 
-source_file="res://assets/chair_1.png"
-dest_files=[ "res://.import/chair_1.png-c291b22cfbd0c9d0f5958c6822c41a3c.s3tc.stex", "res://.import/chair_1.png-c291b22cfbd0c9d0f5958c6822c41a3c.etc2.stex" ]
+source_file="res://chair_1.png"
+source_md5="04a893daa9ca42b541222106757e78a2"
+
+dest_files=[ "res://.import/chair_1.png-a536f56f91c6874476381b94f1132ae0.s3tc.stex", "res://.import/chair_1.png-a536f56f91c6874476381b94f1132ae0.etc2.stex" ]
+dest_md5="e4d79b9eac90d6ac89009021fade3d72"
 
 [params]
 

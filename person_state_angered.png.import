@@ -2,13 +2,16 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/person_state_angered.png-d31aaaecc1ec5d50c56ec0e98f174d20.s3tc.stex"
-path.etc2="res://.import/person_state_angered.png-d31aaaecc1ec5d50c56ec0e98f174d20.etc2.stex"
+path.s3tc="res://.import/person_state_angered.png-c52a3e35f4fbb39b3f408bfed43a5528.s3tc.stex"
+path.etc2="res://.import/person_state_angered.png-c52a3e35f4fbb39b3f408bfed43a5528.etc2.stex"
 
 [deps]
 
-source_file="res://assets/person_state_angered.png"
-dest_files=[ "res://.import/person_state_angered.png-d31aaaecc1ec5d50c56ec0e98f174d20.s3tc.stex", "res://.import/person_state_angered.png-d31aaaecc1ec5d50c56ec0e98f174d20.etc2.stex" ]
+source_file="res://person_state_angered.png"
+source_md5="04a893daa9ca42b541222106757e78a2"
+
+dest_files=[ "res://.import/person_state_angered.png-c52a3e35f4fbb39b3f408bfed43a5528.s3tc.stex", "res://.import/person_state_angered.png-c52a3e35f4fbb39b3f408bfed43a5528.etc2.stex" ]
+dest_md5="971252eeb701dd267036256a538dda5a"
 
 [params]
 

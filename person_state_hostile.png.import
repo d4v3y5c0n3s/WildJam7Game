@@ -2,13 +2,16 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/person_state_hostile.png-5dd404625a727c393d4739701f6ce54d.s3tc.stex"
-path.etc2="res://.import/person_state_hostile.png-5dd404625a727c393d4739701f6ce54d.etc2.stex"
+path.s3tc="res://.import/person_state_hostile.png-b6a1bde4b39ea305da20c00bd3fee48c.s3tc.stex"
+path.etc2="res://.import/person_state_hostile.png-b6a1bde4b39ea305da20c00bd3fee48c.etc2.stex"
 
 [deps]
 
-source_file="res://assets/person_state_hostile.png"
-dest_files=[ "res://.import/person_state_hostile.png-5dd404625a727c393d4739701f6ce54d.s3tc.stex", "res://.import/person_state_hostile.png-5dd404625a727c393d4739701f6ce54d.etc2.stex" ]
+source_file="res://person_state_hostile.png"
+source_md5="04a893daa9ca42b541222106757e78a2"
+
+dest_files=[ "res://.import/person_state_hostile.png-b6a1bde4b39ea305da20c00bd3fee48c.s3tc.stex", "res://.import/person_state_hostile.png-b6a1bde4b39ea305da20c00bd3fee48c.etc2.stex" ]
+dest_md5="812e815b2731baec4cb6160a05f6ead3"
 
 [params]
 

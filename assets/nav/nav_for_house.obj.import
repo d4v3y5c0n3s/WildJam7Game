@@ -9,9 +9,11 @@ path="res://.import/nav_for_house.obj-652fcf84879ab08fb6e37236cdc02ecb.mesh"
 files=[ "res://.import/nav_for_house.obj-652fcf84879ab08fb6e37236cdc02ecb.mesh" ]
 
 source_file="res://assets/nav/nav_for_house.obj"
+source_md5="dfef43f265431abf33d8f719dcfb2923"
+
 dest_files=[ "res://.import/nav_for_house.obj-652fcf84879ab08fb6e37236cdc02ecb.mesh", "res://.import/nav_for_house.obj-652fcf84879ab08fb6e37236cdc02ecb.mesh" ]
+dest_md5="8ab30595d1d36d88cf31e712b98b82eb"
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )

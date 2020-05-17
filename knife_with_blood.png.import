@@ -2,13 +2,16 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/knife_with_blood.png-bf6cdc44217cf2569d4a0bb7e557d3bb.s3tc.stex"
-path.etc2="res://.import/knife_with_blood.png-bf6cdc44217cf2569d4a0bb7e557d3bb.etc2.stex"
+path.s3tc="res://.import/knife_with_blood.png-5c54978fe55782a9bb3787b9023ba056.s3tc.stex"
+path.etc2="res://.import/knife_with_blood.png-5c54978fe55782a9bb3787b9023ba056.etc2.stex"
 
 [deps]
 
-source_file="res://assets/knife_with_blood.png"
-dest_files=[ "res://.import/knife_with_blood.png-bf6cdc44217cf2569d4a0bb7e557d3bb.s3tc.stex", "res://.import/knife_with_blood.png-bf6cdc44217cf2569d4a0bb7e557d3bb.etc2.stex" ]
+source_file="res://knife_with_blood.png"
+source_md5="04a893daa9ca42b541222106757e78a2"
+
+dest_files=[ "res://.import/knife_with_blood.png-5c54978fe55782a9bb3787b9023ba056.s3tc.stex", "res://.import/knife_with_blood.png-5c54978fe55782a9bb3787b9023ba056.etc2.stex" ]
+dest_md5="e98694e87ebefb8d253ed432665ff58a"
 
 [params]
 

@@ -2,16 +2,18 @@
 
 importer="wavefront_obj"
 type="Mesh"
-path="res://.import/knife.obj-5b1b2507e020a95466df2bf43cbdb8ed.mesh"
+path="res://.import/knife.obj-5f78ea6a5bd2c0ffa559e3b4143dd0af.mesh"
 
 [deps]
 
-files=[ "res://.import/knife.obj-5b1b2507e020a95466df2bf43cbdb8ed.mesh" ]
+files=[ "res://.import/knife.obj-5f78ea6a5bd2c0ffa559e3b4143dd0af.mesh" ]
 
-source_file="res://assets/knife.obj"
-dest_files=[ "res://.import/knife.obj-5b1b2507e020a95466df2bf43cbdb8ed.mesh", "res://.import/knife.obj-5b1b2507e020a95466df2bf43cbdb8ed.mesh" ]
+source_file="res://knife.obj"
+source_md5="a4ee44d2bebda5b07b89d529daa4f49b"
+
+dest_files=[ "res://.import/knife.obj-5f78ea6a5bd2c0ffa559e3b4143dd0af.mesh", "res://.import/knife.obj-5f78ea6a5bd2c0ffa559e3b4143dd0af.mesh" ]
+dest_md5="80f29f8bf414e659be65c1f97bbb0710"
 
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )

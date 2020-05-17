@@ -2,13 +2,16 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/person_state_thrilled.png-1df7892ff92776ad2a5300e12fc38045.s3tc.stex"
-path.etc2="res://.import/person_state_thrilled.png-1df7892ff92776ad2a5300e12fc38045.etc2.stex"
+path.s3tc="res://.import/person_state_thrilled.png-95edb2bfad5556ae2c589cb8c327e71c.s3tc.stex"
+path.etc2="res://.import/person_state_thrilled.png-95edb2bfad5556ae2c589cb8c327e71c.etc2.stex"
 
 [deps]
 
-source_file="res://assets/person_state_thrilled.png"
-dest_files=[ "res://.import/person_state_thrilled.png-1df7892ff92776ad2a5300e12fc38045.s3tc.stex", "res://.import/person_state_thrilled.png-1df7892ff92776ad2a5300e12fc38045.etc2.stex" ]
+source_file="res://person_state_thrilled.png"
+source_md5="04a893daa9ca42b541222106757e78a2"
+
+dest_files=[ "res://.import/person_state_thrilled.png-95edb2bfad5556ae2c589cb8c327e71c.s3tc.stex", "res://.import/person_state_thrilled.png-95edb2bfad5556ae2c589cb8c327e71c.etc2.stex" ]
+dest_md5="6f18751754b09e8e7ff670e64d0c14c8"
 
 [params]
 
